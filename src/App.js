@@ -44,6 +44,10 @@ const devices = [
   // },
 ]
 
+let previewurl = (window.location.search.split('previewurl=')[1]||'').split('&')[0];
+if(!previewurl) previewurl = 'https://mways.io';
+console.log(previewurl)
+
 class App extends React.Component {
 
   state = {
@@ -69,7 +73,7 @@ class App extends React.Component {
                 });
               }}>
               {devices.map(device => 
-                <option value={device.device}>{device.label}</option>  
+                <option key={device.device} value={device.device}>{device.label}</option>  
               )}
             </select>
           </div>
@@ -82,12 +86,14 @@ class App extends React.Component {
           <div style={{flex: 1}}>
           <select value={this.state.color} style={{width: 200}} onChange={e => this.setState({color: e.target.value})}>
             {device.colors.map(c => (
-              <option value={c.color}>{c.label}</option>
+              <option key={c.color} value={c.color}>{c.label}</option>
             ))}
           </select>
           </div>
         </div>
-
+        <div style={{marginTop: 20, textAlign: 'right'}} >
+          <a target="_blank" className="App-link" href="https://github.com/lucnat/mways-preview"> <img style={{width: 20, marginRight: 20, position: 'absolute', marginLeft: -30, filter: 'invert(1)'}} src="github.png" />View on github</a>
+        </div>
       </div>
     )
   }
@@ -97,15 +103,15 @@ class App extends React.Component {
     console.log(mode);
     return (
       <div className={'device ' + this.state.device + ' ' + this.state.color} style={{display: 'inline-block', marginRight: 100}}>
-        <div class="device-frame iframe-parent">
-          <iframe class="device-content" frameborder="0" scrolling="no" style={{
-          border: 'none', display: 'inline-block'}} src={'http://localhost:8100/?mode='+mode} />
+        <div className="device-frame iframe-parent">
+          <iframe className="device-content" frameBorder="0" scrolling="no" style={{
+          border: 'none', display: 'inline-block'}} src={previewurl +'?mode='+mode} />
         </div>
-        <div class="device-stripe"></div>
-        <div class="device-header"></div>
-        <div class="device-sensors"></div>
-        <div class="device-btns"></div>
-        <div class="device-power"></div>
+        <div className="device-stripe"></div>
+        <div className="device-header"></div>
+        <div className="device-sensors"></div>
+        <div className="device-btns"></div>
+        <div className="device-power"></div>
       </div>
     )
   }
