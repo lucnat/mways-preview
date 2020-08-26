@@ -46,7 +46,7 @@ const devices = [
 
 let previewurl = (window.location.search.split('previewurl=')[1]||'').split('&')[0];
 if(!previewurl) previewurl = 'https://mways.io';
-console.log(previewurl)
+console.log('previewurl',previewurl)
 
 class App extends React.Component {
 
@@ -92,7 +92,7 @@ class App extends React.Component {
           </div>
         </div>
         <div style={{marginTop: 20, textAlign: 'right'}} >
-          <a target="_blank" className="App-link" href="https://github.com/lucnat/mways-preview"> <img style={{width: 20, marginRight: 20, position: 'absolute', marginLeft: -30, filter: 'invert(1)'}} src="github.png" />View on github</a>
+          <a target="_blank" className="App-link" href="https://github.com/lucnat/mways-preview"> <img style={{width: 20, marginRight: 20, position: 'absolute', marginLeft: -30, filter: 'invert(1)'}} src="github.png" />View on GitHub</a>
         </div>
       </div>
     )
