@@ -1,7 +1,11 @@
 
 ## Milliways preview
 
-Preview ionic apps with ease. Usage:
+Preview ionic apps with ease.
+
+[<img src="https://i.imgur.com/N6HUtXk.gif" width="80%">](https://i.imgur.com/N6HUtXk.gif>)
+
+Usage:
 
 ### Step 1 
 Add the platform switcher to your ionic app (e.g. for react):
