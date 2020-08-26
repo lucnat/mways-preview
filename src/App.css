@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 7vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+iframe {
+  overflow: hidden
+}
+
+.frame-parent ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+select {
+  padding: 5px;
+  font-size: 20px;
+}
