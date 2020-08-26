@@ -120,10 +120,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div style={{textAlign: 'right', marginRight: 50}}>
+          <div style={{textAlign: 'right', marginRight: 50, position: 'fixed', right: 0}}>
             <img src="logo.png" style={{marginTop: 50}} className="App-logo" alt="logo" />
           </div>
           <div style={{textAlign: 'center'}}>
+          <br />
+          <br />
             {this.renderDevice()}
             {this.renderControls()}
           </div>
