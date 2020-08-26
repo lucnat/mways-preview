@@ -1,13 +1,21 @@
 
-## Available Scripts
+## Milliways preview
 
-In the project directory, you can run:
+Preview ionic apps with ease. Usage:
 
-### `yarn start`
+### Step 1 
+Add the platform switcher to your ionic app (e.g. for react):
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+import { setupConfig } from '@ionic/react';
+const mode = (window.location.search.split('mode=')[1]||'').split('&')[0];
+if(mode) setupConfig({mode});
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Step 2
+Deploy your ionic app somewhere on the web, e.g. [vercel](https://vercel.com).
+
+### Step 3
+Your app preview is available under [preview.mways.io?previewurl=YOUR-APP-URL](https://preview.mways.io?previewurl=YOUR-APP-URL)
+
 
