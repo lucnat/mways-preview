@@ -20,6 +20,6 @@ if(mode) setupConfig({mode});
 Deploy your ionic app somewhere on the web, e.g. [vercel](https://vercel.com).
 
 #### Step 3
-Your app preview is available under [preview.mways.io?previewurl=YOUR-APP-URL](https://preview.mways.io?previewurl=YOUR-APP-URL)
+Your app preview is available under [preview.mways.io](https://preview.mways.io?previewurl=YOUR-APP-URL)
 
 
